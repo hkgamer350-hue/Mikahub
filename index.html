@@ -6,62 +6,91 @@
 <title>Mika Hub</title>
 
 <style>
-body{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial,sans-serif;
+}
+
+body{
 background:#0d1117;
-color:white;
-text-align:center;
+color:#fff;
 }
 
 header{
-padding:50px 20px;
+background:#161b22;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-h1{
-font-size:45px;
+.logo{
+font-size:28px;
+font-weight:bold;
 color:#00ff99;
 }
 
-p{
-font-size:18px;
+nav a{
+color:white;
+text-decoration:none;
+margin:0 10px;
+}
+
+.hero{
+text-align:center;
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:50px;
+color:#00ff99;
+}
+
+.hero p{
+margin-top:15px;
+font-size:20px;
 color:#ddd;
 }
 
 .btn{
 display:inline-block;
+margin-top:25px;
 padding:15px 35px;
 background:#00ff99;
 color:#000;
 text-decoration:none;
+border-radius:8px;
 font-weight:bold;
-border-radius:10px;
-margin-top:20px;
 }
 
-.cards{
+.courses{
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
 gap:20px;
-padding:40px;
+padding:50px 20px;
 }
 
 .card{
 background:#161b22;
+width:280px;
 padding:20px;
-width:250px;
 border-radius:15px;
-box-shadow:0 0 15px rgba(0,255,153,.3);
+text-align:center;
 }
 
 .card h2{
 color:#00ff99;
+margin-bottom:10px;
 }
 
 footer{
-padding:30px;
-color:#888;
+background:#161b22;
+text-align:center;
+padding:20px;
+margin-top:40px;
 }
 </style>
 
@@ -69,32 +98,40 @@ color:#888;
 <body>
 
 <header>
-<h1>🔥 Mika Hub 🔥</h1>
+<div class="logo">Mika Hub</div>
 
-<p>Learn Smart Money Concepts (SMC), ICT & Quotex Trading</p>
-
-<a class="btn" href="https://t.me/YOUR_TELEGRAM_USERNAME">Join Telegram</a>
-
+<nav>
+<a href="#">Home</a>
+<a href="#">Courses</a>
+<a href="#">Contact</a>
+</nav>
 </header>
 
-<div class="cards">
+<section class="hero">
+<h1>Master SMC • ICT • Quotex</h1>
+<p>Learn Professional Trading Step by Step</p>
+
+<a class="btn" href="#">Enroll Now</a>
+</section>
+
+<section class="courses">
 
 <div class="card">
-<h2>📈 SMC Course</h2>
-<p>Complete Smart Money Concept course.</p>
+<h2>SMC Course</h2>
+<p>Complete Smart Money Concept Course.</p>
 </div>
 
 <div class="card">
-<h2>📊 ICT Masterclass</h2>
+<h2>ICT Masterclass</h2>
 <p>Institutional Trading Concepts.</p>
 </div>
 
 <div class="card">
-<h2>💹 Quotex Strategy</h2>
-<p>Best Binary Trading Strategies.</p>
+<h2>Quotex Strategy</h2>
+<p>High Accuracy Binary Trading Strategies.</p>
 </div>
 
-</div>
+</section>
 
 <footer>
 © 2026 Mika Hub | All Rights Reserved
