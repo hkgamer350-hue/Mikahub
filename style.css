@@ -238,3 +238,22 @@ z-index:9999;
 50%{transform:translateY(-10px);}
 100%{transform:translateY(0);}
 }
+.telegram-btn{
+display:inline-block;
+padding:15px 35px;
+background:#229ED9;
+color:#fff;
+text-decoration:none;
+font-size:18px;
+font-weight:bold;
+border-radius:10px;
+transition:.3s;
+box-shadow:0 0 15px #229ED9;
+margin-top:15px;
+}
+
+.telegram-btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 30px #229ED9;
+background:#1b8bc3;
+}
