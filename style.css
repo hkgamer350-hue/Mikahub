@@ -134,3 +134,58 @@ font-size:18px;
 }
 
 }
+/* Fade In Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero Animation */
+.hero h1 {
+  animation: fadeUp 1s ease;
+}
+
+.hero p {
+  animation: fadeUp 1.3s ease;
+}
+
+.hero .btn {
+  animation: fadeUp 1.6s ease;
+}
+
+/* Course Cards Animation */
+.card {
+  animation: fadeUp 1s ease;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 0 30px #00ff99;
+}
+
+/* Logo Glow */
+.logo {
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #00ff99;
+  }
+  to {
+    text-shadow: 0 0 20px #00ff99;
+  }
+}
+
+/* Button Animation */
+.btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px #00ff99;
+}
