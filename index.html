@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mika Hub</title>
+<title>Mika Hub | SMC • ICT • Quotex</title>
 
 <style>
 *{
@@ -14,128 +14,182 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#0d1117;
+background:#05070d;
 color:#fff;
+overflow-x:hidden;
 }
 
 header{
-background:#161b22;
-padding:20px;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+background:rgba(0,0,0,.6);
+backdrop-filter:blur(12px);
+z-index:999;
 }
 
 .logo{
-font-size:28px;
+font-size:32px;
 font-weight:bold;
 color:#00ff99;
 }
 
 nav a{
-color:white;
 text-decoration:none;
-margin:0 10px;
+color:#fff;
+margin-left:25px;
+font-size:18px;
+transition:.3s;
 }
 
-.hero{
-text-align:center;
-padding:80px 20px;
-}
-
-.hero h1{
-font-size:50px;
+nav a:hover{
 color:#00ff99;
 }
 
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
+url("https://images.unsplash.com/photo-1642790106117-e829e14a795f?q=80&w=1600&auto=format&fit=crop") center/cover;
+}
+
+.hero h1{
+font-size:55px;
+color:#00ff99;
+margin-bottom:20px;
+}
+
 .hero p{
-margin-top:15px;
-font-size:20px;
+font-size:22px;
+max-width:700px;
 color:#ddd;
+margin-bottom:35px;
 }
 
 .btn{
 display:inline-block;
-margin-top:25px;
-padding:15px 35px;
+padding:16px 38px;
 background:#00ff99;
 color:#000;
 text-decoration:none;
-border-radius:8px;
 font-weight:bold;
+border-radius:10px;
+transition:.3s;
 }
 
-.courses{
+.btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 25px #00ff99;
+}
+
+.stats{
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
 gap:20px;
-padding:50px 20px;
+padding:60px 20px;
+background:#0b0f17;
 }
 
-.card{
-background:#161b22;
-width:280px;
-padding:20px;
+.box{
+width:220px;
+background:#141b26;
+padding:25px;
 border-radius:15px;
 text-align:center;
+border:1px solid #1d2938;
 }
 
-.card h2{
+.box h2{
 color:#00ff99;
+font-size:32px;
 margin-bottom:10px;
 }
 
-footer{
-background:#161b22;
-text-align:center;
-padding:20px;
-margin-top:40px;
+.box p{
+color:#bbb;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+nav{
+display:none;
+}
+
+.logo{
+font-size:28px;
+}
+
 }
 </style>
 
 </head>
+
 <body>
 
 <header>
+
 <div class="logo">Mika Hub</div>
 
 <nav>
 <a href="#">Home</a>
 <a href="#">Courses</a>
+<a href="#">Reviews</a>
 <a href="#">Contact</a>
 </nav>
+
 </header>
 
 <section class="hero">
+
 <h1>Master SMC • ICT • Quotex</h1>
-<p>Learn Professional Trading Step by Step</p>
 
-<a class="btn" href="#">Enroll Now</a>
-</section>
+<p>
+Become a Professional Trader with Smart Money Concepts,
+ICT Strategies and Quotex Masterclass.
+</p>
 
-<section class="courses">
-
-<div class="card">
-<h2>SMC Course</h2>
-<p>Complete Smart Money Concept Course.</p>
-</div>
-
-<div class="card">
-<h2>ICT Masterclass</h2>
-<p>Institutional Trading Concepts.</p>
-</div>
-
-<div class="card">
-<h2>Quotex Strategy</h2>
-<p>High Accuracy Binary Trading Strategies.</p>
-</div>
+<a href="#" class="btn">Start Learning</a>
 
 </section>
 
-<footer>
-© 2026 Mika Hub | All Rights Reserved
-</footer>
+<section class="stats">
+
+<div class="box">
+<h2>500+</h2>
+<p>Students</p>
+</div>
+
+<div class="box">
+<h2>15+</h2>
+<p>Trading Lessons</p>
+</div>
+
+<div class="box">
+<h2>24/7</h2>
+<p>Support</p>
+</div>
+
+</section>
 
 </body>
 </html>
