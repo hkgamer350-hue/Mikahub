@@ -200,3 +200,17 @@ animation:bgMove 10s ease infinite;
 50%{background-position:100% 50%;}
 100%{background-position:0% 50%;}
 }
+.hero h1{
+animation:zoomIn 1.2s ease;
+}
+
+@keyframes zoomIn{
+0%{
+opacity:0;
+transform:scale(.7);
+}
+100%{
+opacity:1;
+transform:scale(1);
+}
+}
