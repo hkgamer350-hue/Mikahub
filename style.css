@@ -257,3 +257,29 @@ transform:scale(1.08);
 box-shadow:0 0 30px #229ED9;
 background:#1b8bc3;
 }
+.crypto{
+padding:80px 8%;
+background:#08111f;
+text-align:center;
+}
+
+.crypto h2{
+font-size:42px;
+color:#00ff99;
+margin-bottom:40px;
+}
+
+.crypto .card{
+background:#161b22;
+padding:25px;
+margin:20px auto;
+max-width:350px;
+border-radius:15px;
+border:1px solid #00ff99;
+transition:0.4s;
+}
+
+.crypto .card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px #00ff99;
+}
