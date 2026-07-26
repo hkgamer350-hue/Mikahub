@@ -409,3 +409,40 @@ transition:.3s;
 background:#1fb857;
 transform:scale(1.05);
 }
+/* Floating WhatsApp */
+
+.floating-whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+height:60px;
+background:#25D366;
+color:#fff;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:32px;
+text-decoration:none;
+z-index:9999;
+box-shadow:0 0 20px rgba(37,211,102,.6);
+animation:whatsappFloat 2s infinite;
+transition:.3s;
+}
+
+.floating-whatsapp:hover{
+transform:scale(1.15);
+}
+
+@keyframes whatsappFloat{
+0%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-10px);
+}
+100%{
+transform:translateY(0);
+}
+}
