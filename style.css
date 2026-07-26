@@ -387,3 +387,25 @@ background:#fff;
 padding:10px;
 border-radius:15px;
 }
+.whatsapp-contact{
+text-align:center;
+padding:30px 0;
+background:#050816;
+}
+
+.whatsapp-btn{
+display:inline-block;
+padding:15px 30px;
+background:#25D366;
+color:#fff;
+text-decoration:none;
+border-radius:50px;
+font-size:18px;
+font-weight:bold;
+transition:.3s;
+}
+
+.whatsapp-btn:hover{
+background:#1fb857;
+transform:scale(1.05);
+}
