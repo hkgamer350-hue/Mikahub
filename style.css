@@ -551,11 +551,15 @@ cursor:pointer;
 .menu-icon{
 display:block;
 }
-
 .navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
 position:relative;
+height:70px;
+padding:0 20px;
+flex-direction:row;
 }
-
 .menu{
 position:absolute;
 top:70px;
