@@ -1,77 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Student Login</title>
+<title>Student Login | MIKA HUB</title>
+
+<link rel="stylesheet" href="style.css">
 
 <style>
+
 body{
-font-family:Arial;
-background:#0f172a;
 display:flex;
 justify-content:center;
 align-items:center;
 height:100vh;
-margin:0;
+background:linear-gradient(135deg,#050816,#0b1833);
 }
-.box{
-background:#1e293b;
-padding:30px;
-border-radius:15px;
-width:320px;
+
+.login-box{
+width:350px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+padding:35px;
+border-radius:20px;
 text-align:center;
-color:white;
+box-shadow:0 0 30px rgba(0,229,255,.3);
 }
-input{
-width:100%;
-padding:12px;
-margin:10px 0;
-border:none;
-border-radius:8px;
+
+.login-box h2{
+color:#00e5ff;
+margin-bottom:25px;
 }
-button{
+
+.login-box input{
 width:100%;
-padding:12px;
-background:#22c55e;
-color:white;
+padding:14px;
+margin:12px 0;
 border:none;
-border-radius:8px;
+border-radius:10px;
+outline:none;
 font-size:16px;
-cursor:pointer;
 }
+
+.login-box button{
+width:100%;
+padding:14px;
+background:#00e5ff;
+border:none;
+border-radius:30px;
+font-weight:bold;
+cursor:pointer;
+font-size:16px;
+}
+
+.login-box button:hover{
+box-shadow:0 0 20px #00e5ff;
+}
+
+.back{
+display:block;
+margin-top:20px;
+color:#fff;
+text-decoration:none;
+}
+
 </style>
+
 </head>
 
 <body>
 
-<div class="box">
+<div class="login-box">
+
 <h2>Student Login</h2>
 
-<input type="text" id="user" placeholder="Username">
+<form>
 
-<input type="password" id="pass" placeholder="Password">
+<input
+type="email"
+placeholder="Email"
+required>
 
-<button onclick="login()">Login</button>
+<input
+type="password"
+placeholder="Password"
+required>
 
-<p id="msg"></p>
+<button type="submit">
+Login
+</button>
+
+</form>
+
+<a href="index.html" class="back">
+← Back to Home
+</a>
 
 </div>
-
-<script>
-function login(){
-
-let u=document.getElementById("user").value;
-let p=document.getElementById("pass").value;
-
-if(u=="student" && p=="12345"){
-window.location="course.html";
-}else{
-document.getElementById("msg").innerHTML="Wrong Username or Password";
-}
-
-}
-</script>
 
 </body>
 </html>
