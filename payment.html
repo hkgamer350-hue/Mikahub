@@ -3,27 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Payment - MIKA HUB</title>
+<title>Payment | MIKA HUB</title>
 
 <link rel="stylesheet" href="style.css">
 
 <style>
+
 body{
-background:#050816;
+background:linear-gradient(135deg,#050816,#0b1833);
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
-color:#fff;
+min-height:100vh;
+padding:20px;
 }
 
 .payment-box{
-width:350px;
-background:#111827;
-padding:25px;
-border-radius:15px;
+max-width:450px;
+width:100%;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+padding:30px;
+border-radius:20px;
 text-align:center;
-box-shadow:0 0 20px cyan;
+box-shadow:0 0 30px rgba(0,229,255,.3);
 }
 
 .payment-box h2{
@@ -31,27 +34,50 @@ color:#00e5ff;
 margin-bottom:20px;
 }
 
-.payment-box p{
-margin:10px 0;
+.payment-card{
+background:#111827;
+padding:20px;
+border-radius:15px;
+margin:20px 0;
+text-align:left;
 }
 
-.payment-box input{
+.payment-card p{
+margin:10px 0;
+font-size:17px;
+}
+
+.copy-btn{
+display:block;
 width:100%;
-padding:10px;
+padding:14px;
+background:#00e5ff;
+color:#000;
+font-weight:bold;
+border:none;
+border-radius:30px;
+cursor:pointer;
 margin-top:15px;
 }
 
-.payment-box button{
-width:100%;
-padding:12px;
+.whatsapp-btn{
+display:inline-block;
 margin-top:20px;
-background:#00e5ff;
-border:none;
+padding:14px 25px;
+background:#25D366;
+color:#fff;
+text-decoration:none;
 border-radius:30px;
-font-size:18px;
 font-weight:bold;
-cursor:pointer;
 }
+
+.back{
+display:block;
+margin-top:20px;
+color:#fff;
+text-decoration:none;
+}
+
 </style>
 
 </head>
@@ -60,18 +86,39 @@ cursor:pointer;
 
 <div class="payment-box">
 
-<h2>Payment Details</h2>
+<h2>Course Payment</h2>
 
-<p><b>Account Title</b></p>
-<p>Muhammad Umais Khalid Ansari</p>
+<p>
+Complete your payment and send the screenshot on WhatsApp.
+</p>
 
-<p><b>Account Number</b></p>
-<p>0324 1710293</p>
+<div class="payment-card">
 
-<input type="file">
+<p><strong>Account Title:</strong><br>
+Muhammad Umais Khalid Ansari</p>
 
-<a href="https://wa.me/923241710293">
-<button>Send Payment Screenshot</button>
+<p><strong>Account Number:</strong><br>
+03241710293</p>
+
+<p><strong>Bank / Wallet:</strong><br>
+JazzCash / Bank Transfer</p>
+
+</div>
+
+<button class="copy-btn"
+onclick="navigator.clipboard.writeText('03241710293')">
+Copy Account Number
+</button>
+
+<a
+href="https://wa.me/923241710293"
+target="_blank"
+class="whatsapp-btn">
+Send Payment Screenshot
+</a>
+
+<a href="index.html" class="back">
+← Back to Home
 </a>
 
 </div>
