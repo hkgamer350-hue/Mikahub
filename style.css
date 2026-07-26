@@ -379,3 +379,11 @@ transition:1s;
 opacity:1;
 transform:translateY(0);
 }
+.qr-code{
+width:220px;
+display:block;
+margin:20px auto;
+background:#fff;
+padding:10px;
+border-radius:15px;
+}
