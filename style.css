@@ -119,8 +119,11 @@ font-size:25px;
 margin:10px;
 }
 
-@media(max-width:768px){
-@media(max-width:768px){
+@media (max-width:768px){
+
+.navbar{
+position:relative;
+}
 
 .menu-icon{
 display:block;
@@ -128,17 +131,20 @@ display:block;
 
 .menu{
 display:none;
-flex-direction:column;
 position:absolute;
 top:70px;
 right:10px;
-background:#111827;
 width:220px;
+background:#111827;
 padding:20px;
 border-radius:10px;
+flex-direction:column;
+gap:15px;
+list-style:none;
+z-index:999;
 }
 
-#menu-toggle:checked + .menu-icon + .menu{
+#menu-toggle:checked ~ .menu{
 display:flex;
 }
 
