@@ -4,24 +4,96 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Guardeer Course</title>
-<link rel="stylesheet" href="style.css">
-</head>
 
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#050816;
+color:#fff;
+padding:20px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+}
+
+.logo{
+display:block;
+width:180px;
+margin:20px auto;
+border-radius:15px;
+}
+
+h1{
+text-align:center;
+margin:20px 0;
+}
+
+.card{
+background:#111827;
+padding:20px;
+border-radius:15px;
+margin-top:20px;
+}
+
+.card h2{
+color:#00c6ff;
+margin-bottom:15px;
+}
+
+ul{
+padding-left:20px;
+}
+
+li{
+margin:10px 0;
+}
+
+.enroll{
+display:block;
+width:220px;
+margin:30px auto;
+padding:15px;
+background:#00c6ff;
+color:#fff;
+text-align:center;
+text-decoration:none;
+border-radius:10px;
+font-size:18px;
+font-weight:bold;
+}
+</style>
+
+</head>
 <body>
 
-<h1>Guardeer Course</h1>
+<div class="container">
 
-<img src="guardeer.png" alt="Guardeer Logo" width="200">
+<img src="guardeer.png" class="logo">
 
-<h2>Topics Included</h2>
+<h1>Guardeer Masterclass</h1>
+
+<div class="card">
+<h2>Course Topics</h2>
 
 <ul>
-<li>Blueprint</li>
-<li>Cartel</li>
-<li>Fractal</li>
-<li>Live Classes Recording</li>
-<li>La Palata</li>
+<li>✅ Blueprint</li>
+<li>✅ Cartel</li>
+<li>✅ Fractal</li>
+<li>✅ Live Classes Recording</li>
+<li>✅ La Palata</li>
 </ul>
+
+</div>
+
+<div class="card">
 
 <h2>Payment Method</h2>
 
@@ -29,7 +101,11 @@
 <p>EasyPaisa</p>
 <p>Bank Transfer</p>
 
-<a href="#">Enroll Now</a>
+</div>
+
+<a href="#" class="enroll">Enroll Now</a>
+
+</div>
 
 </body>
 </html>
