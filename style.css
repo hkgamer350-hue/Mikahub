@@ -570,3 +570,6 @@ font-weight:bold;
     border:3px solid #00c6ff;
     box-shadow:0 0 20px #00c6ff;
 }
+.mentor-pic{
+    display:none;
+}
