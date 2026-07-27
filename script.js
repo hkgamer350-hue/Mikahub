@@ -1,62 +1,56 @@
-// ==========================
 // MIKA HUB Premium Script
-// ==========================
 
-// Mobile Menu Close
-const menuToggle = document.getElementById("menu-toggle");
-const menuLinks = document.querySelectorAll(".menu a");
-
-menuLinks.forEach(link=>{
-link.addEventListener("click",()=>{
-menuToggle.checked=false;
-});
-});
-
-// Navbar Shadow
 window.addEventListener("scroll",()=>{
 
-const header=document.querySelector("header");
+const cards=document.querySelectorAll(".card");
 
-if(window.scrollY>50){
-header.style.background="rgba(5,8,22,.95)";
-header.style.boxShadow="0 5px 20px rgba(0,0,0,.4)";
-}else{
-header.style.background="rgba(10,20,40,.7)";
-header.style.boxShadow="none";
-}
+cards.forEach(card=>{
 
-});
+const top=card.getBoundingClientRect().top;
 
-// Fade Animation
-const observer=new IntersectionObserver(entries=>{
+if(top<window.innerHeight-100){
 
-entries.forEach(entry=>{
+card.style.opacity="1";
+card.style.transform="translateY(0px)";
 
-if(entry.isIntersecting){
-entry.target.classList.add("show");
 }
 
 });
 
 });
 
-document.querySelectorAll(".course-card,.review-card,.about,.contact").forEach(el=>{
-el.classList.add("hidden");
-observer.observe(el);
-});
+document.querySelectorAll(".card").forEach(card=>{
 
-// Floating Effect
-document.addEventListener("mousemove",(e)=>{
+card.style.opacity="0";
 
-const circles=document.querySelectorAll(".circle");
+card.style.transform="translateY(60px)";
 
-circles.forEach((circle,index)=>{
-
-const speed=(index+1)*15;
-
-circle.style.transform=
-`translate(${e.clientX/speed}px,${e.clientY/speed}px)`;
+card.style.transition="0.8s ease";
 
 });
 
+document.querySelectorAll(".btn,.card-btn").forEach(btn=>{
+
+btn.addEventListener("mouseenter",()=>{
+
+btn.style.transform="scale(1.08)";
+
 });
+
+btn.addEventListener("mouseleave",()=>{
+
+btn.style.transform="scale(1)";
+
+});
+
+});
+
+window.addEventListener("load",()=>{
+
+document.body.style.opacity="1";
+
+});
+
+document.body.style.opacity="0";
+
+document.body.style.transition="0.7s";
