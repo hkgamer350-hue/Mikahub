@@ -3,182 +3,123 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Payment | MIKA HUB</title>
 
-<link rel="stylesheet" href="style.css">
+<title>Secure Payment | Mika Hub</title>
 
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
 body{
-background:linear-gradient(135deg,#050816,#0b1833);
+background:#050816;
+color:#fff;
 display:flex;
 justify-content:center;
 align-items:center;
 min-height:100vh;
-padding:20px;
+padding:25px;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+width:350px;
+height:350px;
+background:#00e5ff;
+filter:blur(170px);
+top:-120px;
+left:-120px;
+opacity:.35;
+z-index:-1;
+}
+
+body::after{
+content:"";
+position:fixed;
+width:350px;
+height:350px;
+background:#7b2cff;
+filter:blur(170px);
+bottom:-120px;
+right:-120px;
+opacity:.35;
+z-index:-1;
 }
 
 .payment-box{
-max-width:450px;
 width:100%;
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(15px);
-padding:30px;
-border-radius:20px;
+max-width:430px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.1);
+border-radius:25px;
+padding:25px;
+box-shadow:0 0 30px rgba(0,229,255,.25);
+animation:fade .8s ease;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+h1{
 text-align:center;
-box-shadow:0 0 30px rgba(0,229,255,.3);
-}
-
-.payment-box h2{
+font-size:30px;
+margin-bottom:10px;
 color:#00e5ff;
-margin-bottom:20px;
 }
 
-.payment-card{
-background:#111827;
+.subtitle{
+text-align:center;
+color:#bbb;
+margin-bottom:25px;
+}
+
+.card{
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.08);
+border-radius:20px;
 padding:20px;
-border-radius:15px;
-margin:20px 0;
-text-align:left;
+margin-bottom:20px;
+text-align:center;
 }
 
-.payment-card p{
-margin:10px 0;
-font-size:17px;
+.card h2{
+color:#00e5ff;
+margin-bottom:15px;
 }
 
-.copy-btn{
-display:block;
-width:100%;
-padding:14px;
-background:#00e5ff;
-color:#000;
-font-weight:bold;
-border:none;
-border-radius:30px;
-cursor:pointer;
-margin-top:15px;
+.qr{
+width:220px;
+height:220px;
+object-fit:cover;
+border-radius:18px;
+border:3px solid #00e5ff;
+box-shadow:0 0 20px #00e5ff;
+margin-bottom:15px;
 }
-
-.whatsapp-btn{
-display:inline-block;
-margin-top:20px;
-padding:14px 25px;
-background:#25D366;
-color:#fff;
-text-decoration:none;
-border-radius:30px;
-font-weight:bold;
-}
-
-.back{
-display:block;
-margin-top:20px;
-color:#fff;
-text-decoration:none;
-}
-
 </style>
-
 </head>
 
 <body>
-<div class="bg-blur blur1"></div>
-<div class="bg-blur blur2"></div>
 
-<div class="premium-badge">
-    🔒 Secure Payment
-</div>
 <div class="payment-box">
 
-<h2>Course Payment</h2>
+<h1>💳 Secure Payment</h1>
 
-<p>
-Complete your payment and send the screenshot on WhatsApp.
+<p class="subtitle">
+Pay using JazzCash or USDT and send the screenshot on WhatsApp.
 </p>
-
-<div class="payment-card">
-
-<p><strong>Account Title:</strong><br>
-Muhammad Umais Khalid Ansari</p>
-
-<p><strong>Account Number:</strong><br>
-03241710923</p>
-
-<p><strong>Bank / Wallet:</strong><br>
-JazzCash / Bank Transfer</p>
-
-</div>
-<h3>Scan & Pay</h3>
-
-<img src="jazzcashqr.png" class="qr-code" alt="JazzCash QR">
-
-<button class="copy-btn"
-onclick="navigator.clipboard.writeText('03241710923')">
-Copy Account Number
-</button>
-
-<a
-href="https://wa.me/923241710923"
-target="_blank"
-class="whatsapp-btn">
-Send Payment Screenshot
-</a>
-
-<a href="index.html" class="back">
-← Back to Home
-</a>
-
-</div>
-<div class="payment-card">
-
-<h3>✅ After Payment</h3>
-
-<p>1️⃣ Complete your payment of <b>PKR 2,500</b>.</p>
-
-<p>2️⃣ Take a screenshot of the payment.</p>
-
-<p>3️⃣ Send the screenshot on WhatsApp.</p>
-
-<p>4️⃣ Your course access will be activated after verification.</p>
-
-</div>
-
-<a href="https://wa.me/923241710293" class="enroll">
-📲 Send Payment Screenshot
-</a>
-    <div class="card">
-
-<h3>💳 JazzCash</h3>
-
-<img src="jazzcashqr.png" class="mentor-pic" alt="JazzCash QR">
-
-<p><b>Account Name:</b> Muhammad Umais Khalid Ansari</p>
-
-<p><b>JazzCash:</b> 03241710923</p>
-
-    </div>
-<div class="card">
-
-<h3>USDT (TRC20)</h3>
-
-<img src="usdtqr.png" class="mentor-pic" alt="USDT QR">
-
-<p><b>Network:</b> TRC20</p>
-
-<p><b>Scan QR Code to Pay</b></p>
-
-</div>
-  <div class="premium-box">
-
-<h1>🔥 Guardeer Masterclass</h1>
-
-<p>Lifetime Access • Premium Course • Instant Access</p>
-
-<div class="price">
-💰 PKR 2,500
-</div>
-
-  </div>
-</body>
-</html>
