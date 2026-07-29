@@ -125,56 +125,174 @@ grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:35px;
 }
 
-.card{
-background:rgba(255,255,255,.05);
-backdrop-filter:blur(15px);
-border:1px solid rgba(255,255,255,.1);
-border-radius:25px;
-padding:40px 30px;
-transition:.5s;
-box-shadow:0 0 25px rgba(0,255,255,.15);
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
 }
 
-.card:hover{
-transform:translateY(-12px) scale(1.03);
-box-shadow:0 0 40px #00f7ff;
-border-color:#00f7ff;
+body{
+background:#050816;
+color:#fff;
+overflow-x:hidden;
 }
 
-.card i{
-font-size:60px;
-color:#00f7ff;
-margin-bottom:20px;
-text-shadow:0 0 20px #00f7ff;
+/* Animated Background */
+body::before{
+content:"";
+position:fixed;
+width:600px;
+height:600px;
+background:#00e5ff;
+filter:blur(180px);
+opacity:.15;
+top:-150px;
+left:-150px;
+animation:move1 8s ease-in-out infinite alternate;
+z-index:-2;
 }
 
-.card h3{
-font-size:30px;
+body::after{
+content:"";
+position:fixed;
+width:500px;
+height:500px;
+background:#7b2cff;
+filter:blur(180px);
+opacity:.15;
+bottom:-150px;
+right:-150px;
+animation:move2 10s ease-in-out infinite alternate;
+z-index:-2;
+}
+
+@keyframes move1{
+from{transform:translate(0,0);}
+to{transform:translate(120px,80px);}
+}
+
+@keyframes move2{
+from{transform:translate(0,0);}
+to{transform:translate(-120px,-80px);}
+}
+
+/* Navbar */
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(10,15,35,.8);
+backdrop-filter:blur(20px);
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+box-shadow:0 0 25px rgba(0,229,255,.3);
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#00e5ff;
+text-shadow:0 0 15px #00e5ff;
+}
+
+/* Hero */
+.hero{
+padding:140px 20px 70px;
+text-align:center;
+}
+
+.hero h1{
+font-size:42px;
+text-shadow:0 0 25px #00e5ff;
 margin-bottom:15px;
 }
 
-.card p{
-color:#d5d5d5;
-line-height:1.7;
-margin-bottom:30px;
+.hero p{
+color:#cfd8dc;
+font-size:18px;
 }
 
-.card-btn{
+/* Courses */
+.courses{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+padding:50px 8%;
+}
+
+/* 3D Glass Card */
+.card{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.12);
+border-radius:25px;
+padding:30px;
+text-align:center;
+transition:.4s;
+box-shadow:
+0 0 25px rgba(0,229,255,.18),
+0 0 60px rgba(123,44,255,.12);
+}
+
+.card:hover{
+transform:translateY(-15px) scale(1.04);
+box-shadow:
+0 0 35px #00e5ff,
+0 0 80px #7b2cff;
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:18px;
+margin-bottom:20px;
+box-shadow:0 0 25px #00e5ff;
+}
+
+.card h2{
+margin-bottom:15px;
+font-size:28px;
+}
+
+.card p{
+color:#ddd;
+line-height:1.7;
+margin-bottom:25px;
+}
+
+/* Glow Button */
+.btn{
 display:inline-block;
 padding:14px 35px;
-background:#00f7ff;
+background:#00e5ff;
 color:#000;
-text-decoration:none;
-font-weight:700;
+font-weight:bold;
 border-radius:50px;
+text-decoration:none;
 transition:.4s;
-box-shadow:0 0 20px #00f7ff;
+box-shadow:0 0 20px #00e5ff;
 }
 
-.card-btn:hover{
-background:#fff;
+.btn:hover{
+background:#7b2cff;
+color:#fff;
 transform:scale(1.08);
-box-shadow:0 0 35px #00f7ff;
+box-shadow:
+0 0 25px #7b2cff,
+0 0 60px #00e5ff;
+}
+
+/* Footer */
+footer{
+text-align:center;
+padding:35px;
+color:#bbb;
 }
 
 /* Mobile */
