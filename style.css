@@ -596,3 +596,42 @@ transform:translateY(-8px);
     font-weight:700;
     box-shadow:0 0 20px rgba(0,229,255,.3);
 }
+/* ===== Premium Animated Border ===== */
+
+.card{
+    position:relative;
+    overflow:hidden;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    top:-50%;
+    left:-50%;
+    width:200%;
+    height:200%;
+    background:conic-gradient(
+        transparent,
+        #00e5ff,
+        transparent,
+        #7b2cff,
+        transparent
+    );
+    animation:rotateGlow 6s linear infinite;
+    z-index:-2;
+}
+
+.card::after{
+    content:"";
+    position:absolute;
+    inset:3px;
+    background:#0b1126;
+    border-radius:22px;
+    z-index:-1;
+}
+
+@keyframes rotateGlow{
+    100%{
+        transform:rotate(360deg);
+    }
+}
