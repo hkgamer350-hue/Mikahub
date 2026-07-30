@@ -146,6 +146,12 @@ WhatsApp Now
 </footer>
 
 <script src="script.js"></script>
-
+<script>
+function copyWallet(){
+    const text = document.getElementById("wallet").innerText;
+    navigator.clipboard.writeText(text);
+    alert("Wallet Address Copied!");
+}
+</script>
 </body>
 </html>
