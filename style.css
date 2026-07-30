@@ -523,3 +523,57 @@ transform:translateY(-8px);
     transform:scale(1.05);
     box-shadow:0 0 25px #00e5ff;
 }
+/* ===== Premium Payment v2 ===== */
+
+.premium-qr{
+    width:230px;
+    height:230px;
+    object-fit:contain;
+    border-radius:20px;
+    border:3px solid #00e5ff;
+    padding:10px;
+    background:#fff;
+    box-shadow:0 0 30px rgba(0,229,255,.5);
+    transition:.4s;
+}
+
+.premium-qr:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 45px #00e5ff;
+}
+
+.deposit-address{
+    margin:18px 0;
+    padding:12px;
+    background:#111827;
+    border:1px solid rgba(0,229,255,.3);
+    border-radius:12px;
+    color:#00e5ff;
+    font-size:15px;
+    word-break:break-all;
+}
+
+.copy-btn{
+    width:100%;
+    padding:14px;
+    margin-top:12px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(90deg,#00e5ff,#7b2cff);
+    color:#fff;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.copy-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 25px #00e5ff;
+}
+
+.card .btn{
+    width:100%;
+    margin-top:15px;
+    text-align:center;
+}
