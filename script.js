@@ -1,56 +1,74 @@
+// ===========================
 // MIKA HUB Premium Script
+// ===========================
 
-window.addEventListener("scroll",()=>{
+// Smooth Animation
+const cards = document.querySelectorAll(".card,.feature-card");
 
-const cards=document.querySelectorAll(".card");
+const observer = new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.style.opacity="1";
+entry.target.style.transform="translateY(0)";
+}
+});
+});
 
 cards.forEach(card=>{
+card.style.opacity="0";
+card.style.transform="translateY(40px)";
+card.style.transition="0.8s";
+observer.observe(card);
+});
 
-const top=card.getBoundingClientRect().top;
+// Premium Button Ripple
+document.querySelectorAll(".btn,.card-btn").forEach(button=>{
 
-if(top<window.innerHeight-100){
+button.addEventListener("click",function(e){
 
-card.style.opacity="1";
-card.style.transform="translateY(0px)";
+let circle=document.createElement("span");
 
+circle.style.position="absolute";
+circle.style.width="20px";
+circle.style.height="20px";
+circle.style.background="rgba(255,255,255,.5)";
+circle.style.borderRadius="50%";
+circle.style.left=e.offsetX+"px";
+circle.style.top=e.offsetY+"px";
+circle.style.transform="translate(-50%,-50%)";
+circle.style.animation="ripple .6s linear";
+
+this.appendChild(circle);
+
+setTimeout(()=>{
+circle.remove();
+},600);
+
+});
+
+});
+
+// Ripple Animation
+const style=document.createElement("style");
+
+style.innerHTML=`
+.btn,.card-btn{
+position:relative;
+overflow:hidden;
 }
 
-});
+@keyframes ripple{
+from{
+width:0;
+height:0;
+opacity:.8;
+}
+to{
+width:400px;
+height:400px;
+opacity:0;
+}
+}
+`;
 
-});
-
-document.querySelectorAll(".card").forEach(card=>{
-
-card.style.opacity="0";
-
-card.style.transform="translateY(60px)";
-
-card.style.transition="0.8s ease";
-
-});
-
-document.querySelectorAll(".btn,.card-btn").forEach(btn=>{
-
-btn.addEventListener("mouseenter",()=>{
-
-btn.style.transform="scale(1.08)";
-
-});
-
-btn.addEventListener("mouseleave",()=>{
-
-btn.style.transform="scale(1)";
-
-});
-
-});
-
-window.addEventListener("load",()=>{
-
-document.body.style.opacity="1";
-
-});
-
-document.body.style.opacity="0";
-
-document.body.style.transition="0.7s";
+document.head.appendChild(style);
