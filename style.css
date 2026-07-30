@@ -390,3 +390,16 @@ transform:translateY(0);
 transform:translateY(-8px);
 }
 }
+/* Mentor Image */
+
+.mentor-pic{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:20px 20px 0 0;
+    transition:.5s;
+}
+
+.card:hover .mentor-pic{
+    transform:scale(1.08);
+}
