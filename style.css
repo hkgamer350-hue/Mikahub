@@ -492,3 +492,16 @@ transform:translateY(-8px);
     border-radius:15px;
     margin-bottom:20px;
 }
+.premium-qr{
+    width:230px;
+    height:230px;
+    border-radius:20px;
+    border:3px solid #00e5ff;
+    box-shadow:0 0 25px #00e5ff;
+    transition:0.4s;
+}
+
+.premium-qr:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 45px #00e5ff;
+}
