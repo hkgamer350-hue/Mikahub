@@ -744,3 +744,20 @@ transform:translateY(-8px);
 .rating{
     color:#FFD700;
 }
+.telegram-home-btn{
+    display:inline-block;
+    margin-left:15px;
+    padding:14px 28px;
+    background:linear-gradient(135deg,#0088cc,#00bfff);
+    color:#fff;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:700;
+    box-shadow:0 0 20px rgba(0,136,204,.5);
+    transition:.3s;
+}
+
+.telegram-home-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 30px rgba(0,136,204,.8);
+}
