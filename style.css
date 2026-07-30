@@ -488,4 +488,72 @@ transform:translate(0,0);
 transform:translate(-120px,-70px);
 }
 }
+/* ===== Neon Glow Animation ===== */
 
+.card{
+position:relative;
+overflow:hidden;
+}
+
+.card::before{
+content:"";
+position:absolute;
+top:-50%;
+left:-50%;
+width:200%;
+height:200%;
+background:conic-gradient(
+transparent,
+#00e5ff,
+transparent,
+#7b2cff,
+transparent
+);
+animation:rotateGlow 5s linear infinite;
+opacity:.35;
+}
+
+.card::after{
+content:"";
+position:absolute;
+inset:3px;
+background:#0a1020;
+border-radius:22px;
+z-index:0;
+}
+
+.card>*{
+position:relative;
+z-index:1;
+}
+
+@keyframes rotateGlow{
+100%{
+transform:rotate(360deg);
+}
+}
+
+.card:hover{
+transform:translateY(-12px) scale(1.03);
+box-shadow:
+0 0 25px #00e5ff,
+0 0 50px #00e5ff,
+0 0 80px #7b2cff;
+}
+
+/* Strong Glow Button */
+
+.card-btn{
+animation:pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow{
+0%,100%{
+box-shadow:0 0 15px #00e5ff;
+}
+50%{
+box-shadow:
+0 0 30px #00e5ff,
+0 0 60px #7b2cff;
+}
+}
