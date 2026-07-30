@@ -577,3 +577,22 @@ transform:translateY(-8px);
     margin-top:15px;
     text-align:center;
 }
+.subtitle{
+    max-width:700px;
+    margin:20px auto;
+    color:#cfd8dc;
+    font-size:18px;
+    line-height:1.8;
+}
+
+.payment-badge{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 24px;
+    border-radius:50px;
+    background:rgba(0,229,255,.12);
+    border:1px solid #00e5ff;
+    color:#00e5ff;
+    font-weight:700;
+    box-shadow:0 0 20px rgba(0,229,255,.3);
+}
