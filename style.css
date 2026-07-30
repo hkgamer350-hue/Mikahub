@@ -403,3 +403,25 @@ transform:translateY(-8px);
 .card:hover .mentor-pic{
     transform:scale(1.08);
 }
+/* ===== Premium Payment Cards ===== */
+
+.payment-card{
+    background:rgba(255,255,255,0.06);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+    border:1px solid rgba(0,255,255,0.25);
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 0 25px rgba(0,255,255,0.2);
+    transition:0.4s ease;
+}
+
+.payment-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 40px rgba(0,255,255,0.45);
+}
+
+.payment-card img{
+    width:100%;
+    border-radius:15px;
+}
